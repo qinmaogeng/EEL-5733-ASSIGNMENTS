@@ -1,0 +1,12 @@
+For convinience, please go into sudo mode ($ sudo -s)  and run the below commands. 
+
+1) Compile driver module : # make
+
+2) Load module : # insmod char_driver.ko NUM_DEVICES=<num_devices>
+
+3) Test driver :		
+	1) Compile userapp : # make app
+	2) Run userapp : # ./userapp <device_number>			
+		where device_number specifies the id number of the device to be tested.   
+
+4) Unload module : # rmmod char_driver.ko

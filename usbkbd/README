@@ -1,0 +1,8 @@
+steps of test drivers:
+1,Make the usbkbd driver using make command and load it by insmod usbkbd.ko 
+2,Use ls -l /sys/bus/usb/devices/ to see the list of usb devices
+3,Plug the keyboard to the computer, make it visible to the VM
+4,Use ls -l /sys/bus/usb/devices/ again to see the list of usb devices, compare the result with the previous to get the port number
+  of the newly inserted key board
+5,run the change.sh to unbind the keyboard with hid and bind it with usbkbd driver
+6,test the keyboard.
